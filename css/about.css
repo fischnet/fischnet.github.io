@@ -1,0 +1,138 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f9fa;
+    color: #333;
+    text-align: left;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+header {
+    background-color: #0073e6;
+    color: white;
+    padding: 20px 40px;
+    text-align: center;
+    transition: background-color 0.3s;
+}
+
+header h1 {
+    margin: 0;
+    color: #ffffff;
+}
+
+nav {
+    margin-top: 10px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: #ffcc00;
+}
+
+.content {
+    max-width: 800px;
+    margin: auto;
+    padding: 20px;
+    text-align: left;
+    transition: color 0.3s;
+}
+
+h1 {
+    color:#ffffff
+}
+
+h2 {
+    color: #0073e6;
+}
+
+p, li {
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+strong {
+    color: #333;
+}
+
+ul {
+    padding-left: 20px;
+}
+
+.theme-toggle {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    padding: 10px;
+    cursor: pointer;
+    background-color: #000;
+    border: 2px solid #000;
+    border-radius: 50%;
+    font-size: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    transition: background-color 0.3s, border-color 0.3s;
+    z-index: 10000;
+}
+
+.theme-toggle i {
+    color: #fff;
+    transition: color 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    line-height: 0;
+}
+
+.dark-mode {
+    background-color: #141414;
+    color: #ffffff;
+}
+
+.dark-mode h1 {
+    color: #ffffff;
+}
+
+.dark-mode h2 {
+    color: #4da8da;
+}
+
+.dark-mode strong {
+    color: #ffffff;
+}
+
+.dark-mode .theme-toggle {
+    background-color: #fff;
+    border-color: #fff;
+}
+
+.dark-mode .theme-toggle i {
+    color: #000;
+}
+
+nav {
+    text-align: center;
+    margin-top: 10px;
+}
+
+@media (max-width: 768px) {
+    nav {
+        display: block;
+        margin-top: 20px;
+    }
+
+    nav a {
+        display: block;
+        margin: 10px 0;
+    }
+}
