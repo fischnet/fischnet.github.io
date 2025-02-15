@@ -72,3 +72,28 @@ section.products {
 .cta button:hover {
     background-color: #005bb5;
 }
+.cta button, .product-card button {
+    background-color: #0073e6; /* Maintain the brand color */
+    color: white;
+    font-size: 1.1em;
+    padding: 12px 25px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    font-weight: 500;
+    text-transform: uppercase; /* Make text uppercase for consistency */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add subtle shadow for depth */
+}
+
+.cta button:hover, .product-card button:hover {
+    background-color: #005bb5; /* Darker shade on hover */
+    transform: translateY(-3px); /* Slight lift effect */
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15); /* Stronger shadow on hover */
+}
+
+.cta button:focus, .product-card button:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px #ffcc00; /* Focus outline for better accessibility */
+}
+
