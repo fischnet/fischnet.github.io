@@ -1,9 +1,9 @@
-# FischNet
+# FischNet 🎣
 
 **FischNet** is your trusted source for premium virtual fishes in the *Fisch* game. We specialize in offering exclusive in-game assets, including rare and high-quality virtual Fisch such as the legendary Megalodon, to enhance your gaming experience.
 
 ## What We Offer
-- **Megalodon**: The ultimate virtual Fisch for your *Fisch* adventure.
+- **Exotic fishes**: One of the best Fisches to trade, flex or sell on *Fisch*.
 - **Premium Fishes**: A curated selection of exclusive in-game assets.
 - **Reliable Service**: We ensure secure and timely delivery of your purchases.
 
