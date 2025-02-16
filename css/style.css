@@ -113,3 +113,66 @@ section.products {
     outline: none;
     box-shadow: 0 0 0 2px #ffcc00; /* Focus outline for better accessibility */
 }
+
+/* Center the title */
+.title-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 10vh; /* Adjusted to 10vh as requested */
+    text-align: center;
+}
+
+.title-container h2 {
+    font-size: 32px;
+    margin: 0;
+}
+
+/* Currency packs section */
+.currency-packs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    padding: 20px;
+}
+
+.currency-card {
+    width: 300px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 15px;
+    text-align: center;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Ensures consistent spacing */
+    height: 250px; /* Fixed height for all cards */
+}
+
+.currency-card h3 {
+    font-size: 24px;
+    margin: 10px 0;
+}
+
+.currency-card p {
+    font-size: 14px;
+    color: #555;
+    flex-grow: 1; /* Allows the paragraph to take up remaining space */
+}
+
+.currency-card button {
+    background-color: #007BFF;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+    align-self: center; /* Centers the button horizontally */
+}
+
+.currency-card button:hover {
+    background-color: #0056b3;
+}
