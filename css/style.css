@@ -10,11 +10,19 @@ header {
     background-color: #0073e6;
     color: white;
     padding: 20px 40px;
-    text-align: center;
+    display: flex; /* Use flexbox for alignment */
+    justify-content: space-between; /* Space between items */
+    align-items: center; /* Center items vertically */
 }
 
 header h1 {
     margin: 0;
+}
+
+nav {
+    display: flex; /* Use flexbox for navigation items */
+    align-items: center; /* Center items vertically */
+    flex-grow: 1; /* Allow nav to take available space */
 }
 
 nav a {
@@ -150,114 +158,165 @@ section.products {
     padding: 20px;
 }
 
-.currency-card {
-    width: 300px;
-    border: 1px solid #ddd;
-    border-radius: 10px;
-    padding: 15px;
-    text-align: center;
-    background-color: #fff;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    height: 250px;
-    transition: transform 0.3s, box-shadow 0.3s;
-}
-
-.currency-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-}
-
-.currency-card h3 {
-    font-size: 24px;
-    margin: 10px 0;
-}
-
-.currency-card p {
-    font-size: 14px;
-    color: #555;
-    flex-grow: 1;
-}
-
-.currency-card button {
-    background-color: #007BFF;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    margin-top: 10px;
-    align-self: center;
-    transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
-}
-
-.currency-card button:hover {
-    background-color: #0056b3;
-    transform: translateY(-2px);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-/* Contact Page Styles */
-.contact-container {
-    padding: 40px 20px;
-    text-align: center;
-}
-
-.contact-container h2 {
-    font-size: 32px;
-    margin-bottom: 40px;
-}
-
-.contact-info {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 30px;
-    max-width: 1000px;
-    margin: 0 auto;
-}
-
-.contact-card {
+.currency-pack {
     background-color: white;
     border: 1px solid #ddd;
     border-radius: 10px;
-    padding: 25px;
-    text-align: left;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
     transition: transform 0.3s, box-shadow 0.3s;
+    width: 200px; /* Fixed width for currency packs */
 }
 
-.contact-card:hover {
+.currency-pack:hover {
     transform: translateY(-5px);
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
-.contact-card h3 {
-    font-size: 24px;
+.currency-pack h3 {
+    margin: 10px 0;
     color: #0073e6;
-    margin: 0 0 20px 0;
 }
 
-.contact-card dl {
-    margin: 0;
+.currency-pack p {
+    margin: 10px 0;
 }
 
-.contact-card dt {
-    font-weight: 600;
-    color: #333;
-    margin-top: 15px;
+.cart-sidebar {
+    position: fixed;
+    right: 0;
+    top: 0;
+    width: 300px;
+    height: 100%;
+    background-color: white;
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    display: none; /* Initially hidden */
+    flex-direction: column;
 }
 
-.contact-card dd {
-    margin: 5px 0 0 0;
-    color: #555;
+.cart-sidebar.active {
+    display: flex; /* Show when active */
 }
 
-.contact-card a {
-    color: #0073e6;
-    text-decoration: none;
+.cart-sidebar h2 {
+    margin: 0 0 20px;
 }
 
-.contact-card a:hover {
-    text-decoration: underline;
+.cart-items {
+    flex-grow: 1; /* Allow items to take available space */
+    overflow-y: auto; /* Scroll if items overflow */
+}
+
+.cart-items div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.cart-total {
+    font-size: 1.5em;
+    margin-top: 20px;
+    text-align: right;
+}
+
+.remove-button {
+    background-color: transparent; /* Transparent background */
+    border: none; /* No border */
+    cursor: pointer; /* Pointer cursor on hover */
+    color: #0073e6; /* Icon color */
+    font-size: 1.2em; /* Icon size */
+}
+
+.remove-button:hover {
+    color: #005bb5; /* Darker color on hover */
+}
+
+.checkout-button {
+    background-color: #28a745; /* Green background color */
+    color: white; /* White text color */
+    font-size: 1.2em; /* Font size */
+    padding: 12px 20px; /* Padding for the button */
+    border: none; /* No border */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s; /* Smooth transition */
+    margin-top: 20px; /* Space above the button */
+    width: 100%; /* Full width */
+    display: flex; /* Use flexbox for alignment */
+    align-items: center; /* Center items vertically */
+    justify-content: center; /* Center items horizontally */
+}
+
+.checkout-button i {
+    margin-right: 8px; /* Space between icon and text */
+    font-size: 1.5em; /* Icon size */
+    margin-top: 2px; /* Adjust this value to align the icon vertically */
+}
+
+.checkout-button:hover {
+    background-color: #218838; /* Darker green on hover */
+    transform: translateY(-2px); /* Slight lift effect */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow effect */
+}
+
+.checkout-button:focus {
+    outline: none; /* Remove outline */
+    box-shadow: 0 0 0 2px #ffcc00; /* Focus outline */
+}
+
+/* Prevent text selection on buttons and their parent elements */
+button {
+    user-select: none; /* Prevent text selection */
+}
+
+.cart-sidebar {
+    position: fixed;
+    right: -300px; /* Start off-screen */
+    top: 0;
+    width: 300px;
+    height: 100%;
+    background-color: white;
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    display: flex; /* Use flexbox for layout */
+    flex-direction: column;
+    transition: transform 0.3s ease; /* Smooth transition for sliding */
+    user-select: none;
+}
+
+.cart-sidebar.active {
+    transform: translateX(-300px); /* Slide in */
+}
+
+.cart-button {
+    background-color: #0073e6; /* Blue background color */
+    color: white; /* White text color */
+    font-size: 1em; /* Smaller font size */
+    padding: 8px 8px; /* Reduced padding for a smaller button */
+    border: none; /* No border */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s; /* Smooth transition */
+    display: flex; /* Use flexbox for alignment */
+    align-items: center; /* Center items vertically */
+}
+
+.cart-button i {
+    margin-right: 2px; /* Space between icon and text */
+    font-size: 1.2em; /* Icon size */
+    line-height: 1; /* Reset line height to center the icon */
+    vertical-align: middle; /* Align icon vertically */
+}
+
+.cart-button:hover {
+    background-color: #005bb5; /* Darker blue on hover */
+    transform: translateY(-2px); /* Slight lift effect */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow effect */
+}
+
+.cart-button:focus {
+    outline: none; /* Remove outline */
+    box-shadow: 0 0 0 2px #ffcc00; /* Focus outline */
 }

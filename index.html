@@ -7,6 +7,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
     <link rel="icon" href="assets/fischnet.ico" type="image/ico">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdn-uicons.flaticon.com/uicons-bold-rounded/css/uicons-bold-rounded.css"> <!-- Added link for icons -->
     <script defer src="js/main.js"></script> <!-- JS file for general JS -->
 </head>
 <body>
@@ -17,6 +18,9 @@
             <a href="shop.html">Shop</a>
             <a href="about.html">About</a>
             <a href="contact.html">Contact</a>
+            <button class="cart-button">
+                <i class="fi fi-br-shopping-cart"></i> <!-- Only the icon -->
+            </button>
         </nav>
     </header>
 
@@ -63,6 +67,15 @@
         <h2>Need in-game currency, C$?</h2>
         <p>You can buy the currency for cheaper than buying from the in-game shop!</p>
         <button onclick="window.location.href='shop.html'">Money | C$</button>
+    </div>
+
+    <div class="cart-sidebar">
+        <h2>Your Cart</h2>
+        <div id="cart-items"></div>
+        <p>Total: R$<span id="cart-total">0</span></p>
+        <button class="checkout-button" onclick="checkout()">
+            <i class="fi fi-br-comment-check"></i> Checkout
+        </button>
     </div>
 </body>
 </html>
