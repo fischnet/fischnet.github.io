@@ -184,19 +184,21 @@ section.products {
 
 .cart-sidebar {
     position: fixed;
-    right: 0;
+    right: -300px; /* Start off-screen */
     top: 0;
     width: 300px;
     height: 100%;
     background-color: white;
     box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
     padding: 20px;
-    display: none; /* Initially hidden */
+    display: flex; /* Use flexbox for layout */
     flex-direction: column;
+    transition: transform 0.3s ease; /* Smooth transition for sliding */
+    user-select: none; /* Prevent text selection */
 }
 
 .cart-sidebar.active {
-    display: flex; /* Show when active */
+    transform: translateX(-300px); /* Slide in */
 }
 
 .cart-sidebar h2 {
@@ -269,25 +271,6 @@ section.products {
 /* Prevent text selection on buttons and their parent elements */
 button {
     user-select: none; /* Prevent text selection */
-}
-
-.cart-sidebar {
-    position: fixed;
-    right: -300px; /* Start off-screen */
-    top: 0;
-    width: 300px;
-    height: 100%;
-    background-color: white;
-    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
-    padding: 20px;
-    display: flex; /* Use flexbox for layout */
-    flex-direction: column;
-    transition: transform 0.3s ease; /* Smooth transition for sliding */
-    user-select: none;
-}
-
-.cart-sidebar.active {
-    transform: translateX(-300px); /* Slide in */
 }
 
 .cart-button {
