@@ -198,3 +198,66 @@ section.products {
     transform: translateY(-2px);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
+/* Contact Page Styles */
+.contact-container {
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.contact-container h2 {
+    font-size: 32px;
+    margin-bottom: 40px;
+}
+
+.contact-info {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.contact-card {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 25px;
+    text-align: left;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.contact-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.contact-card h3 {
+    font-size: 24px;
+    color: #0073e6;
+    margin: 0 0 20px 0;
+}
+
+.contact-card dl {
+    margin: 0;
+}
+
+.contact-card dt {
+    font-weight: 600;
+    color: #333;
+    margin-top: 15px;
+}
+
+.contact-card dd {
+    margin: 5px 0 0 0;
+    color: #555;
+}
+
+.contact-card a {
+    color: #0073e6;
+    text-decoration: none;
+}
+
+.contact-card a:hover {
+    text-decoration: underline;
+}
