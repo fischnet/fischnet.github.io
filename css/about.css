@@ -8,7 +8,7 @@ body {
 }
 
 header {
-    background-color: #0073e6;
+    background-color: #0073e6; /* Header background color */
     color: white;
     padding: 20px 40px;
     text-align: center;
@@ -21,17 +21,23 @@ header h1 {
 
 nav {
     margin-top: 10px;
+    display: flex; /* Use flexbox for alignment */
+    justify-content: center; /* Center the nav items */
 }
 
 nav a {
-    color: white;
-    text-decoration: none;
-    margin: 0 15px;
-    transition: color 0.3s;
+    background-color: transparent; /* Transparent background for links */
+    color: white; /* Text color */
+    padding: 10px 15px; /* Padding for the links */
+    border-radius: 5px; /* Rounded corners */
+    text-decoration: none; /* Remove underline */
+    transition: background-color 0.3s, transform 0.3s; /* Smooth transition */
+    margin: 0 5px; /* Space between links */
 }
 
 nav a:hover {
-    color: #ffcc00;
+    background-color: #005bb5; /* Darker background on hover */
+    transform: translateY(-2px); /* Slight lift effect */
 }
 
 .content {
@@ -42,7 +48,7 @@ nav a:hover {
 }
 
 h1 {
-    color:#ffffff
+    color: #ffffff;
 }
 
 h2 {
