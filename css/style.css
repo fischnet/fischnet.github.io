@@ -406,3 +406,10 @@ button {
     border-top: 1px solid #ddd; /* Add a top border */
     margin: 5px 0; /* Space above and below the divider */
 }
+
+.robux-image, .coins-image {
+    width: 20px; /* Adjust the width as needed */
+    height: auto; /* Maintain aspect ratio */
+    vertical-align: middle; /* Align with text */
+    margin-right: 5px; /* Space between image and total amount */
+}

@@ -1,17 +1,27 @@
+// Function to format numbers with commas
+function formatCurrency(amount) {
+    return amount.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+}
+
 // Function to add an item to the cart
 function addToCart(itemName, itemPrice) {
     let cart = JSON.parse(localStorage.getItem('cart')) || [];
+    
+    // Extract the currency amount from the item name
+    const currencyAmount = parseInt(itemName.replace(/[^0-9]/g, '')); // Extracts the numeric value from the item name
+
     const newItem = {
         name: itemName,
         price: itemPrice,
-        quantity: 1
+        quantity: 1,
+        currencyAmount: currencyAmount // Store the currency amount
     };
 
     const existingItemIndex = cart.findIndex(item => item.name === itemName);
     if (existingItemIndex > -1) {
-        cart[existingItemIndex].quantity += 1;
+        cart[existingItemIndex].quantity += 1; // Increase quantity if item already exists
     } else {
-        cart.push(newItem);
+        cart.push(newItem); // Add new item to cart
     }
 
     localStorage.setItem('cart', JSON.stringify(cart));
@@ -55,9 +65,13 @@ function updateCartDisplay() {
         cartItemsContainer.appendChild(itemDiv); // Append the item div to the cart items container
     });
 
-    // Update total price
-    const total = cart.reduce((sum, item) => sum + (item.price * item.quantity), 0);
-    document.getElementById('cart-total').textContent = total.toFixed(2); // Format to 2 decimal places
+    // Update total price in Robux (R$)
+    const totalRobux = cart.reduce((sum, item) => sum + (item.price * item.quantity), 0);
+    document.getElementById('cart-total').textContent = Math.floor(totalRobux); // Remove decimals
+
+    // Update total currency in C$ (formatted with commas)
+    const totalCurrency = cart.reduce((sum, item) => sum + (item.currencyAmount * item.quantity), 0);
+    document.getElementById('cart-total-currency').textContent = formatCurrency(totalCurrency); // Format with commas
 }
 
 function removeFromCart(index) {
@@ -79,6 +93,7 @@ function removeFromCart(index) {
     // Update the cart display
     updateCartDisplay();
 }
+
 // Function to handle checkout
 function checkout() {
     alert("Proceeding to checkout...");

@@ -7,8 +7,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
     <link rel="icon" href="assets/fischnet.ico" type="image/ico">
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="https://cdn-uicons.flaticon.com/uicons-bold-rounded/css/uicons-bold-rounded.css"> <!-- Added link for icons -->
-    <script defer src="js/main.js"></script> <!-- JS file for general JS -->
+    <link rel="stylesheet" href="https://cdn-uicons.flaticon.com/uicons-bold-rounded/css/uicons-bold-rounded.css">
+    <script defer src="js/main.js"></script>
 </head>
 <body>
     <header>
@@ -41,7 +41,7 @@
             <button onclick="addToCart('100,000 C$', 65)">Add to Cart</button>
         </div>
         <div class="product-card">
-            <h3>1,000,000 C$<C1></C1></h3>
+            <h3>1,000,000 C$</h3>
             <p>Add 1,000,000 C$ to your balance.</p>
             <button onclick="addToCart('1,000,000 C$', 65)">Add to Cart</button>
         </div>
@@ -56,7 +56,8 @@
     <div class="cart-sidebar">
         <h2>Your Cart</h2>
         <div id="cart-items"></div>
-        <p>Total: R$<span id="cart-total">0</span></p>
+        <p>Total: <img src="assets/robux.png" alt="R$" class="robux-image" style="width: 20px; height: auto; vertical-align: middle; margin-right: 5px;"> <span id="cart-total">0</span></p> <!-- Updated to use an image for R$ -->
+        <p>Total: <img src="assets/coins.png" alt="C$" class="coins-image" style="width: 20px; height: auto; vertical-align: middle; margin-right: 5px;"> <span id="cart-total-currency">0</span></p> <!-- Updated to use an image for C$ -->
         <button class="checkout-button" onclick="checkout()">
             <i class="fi fi-br-comment-check"></i> Checkout
         </button>
