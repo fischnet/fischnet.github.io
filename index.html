@@ -90,10 +90,13 @@
     <div class="cart-sidebar">
         <h2>Your Cart</h2>
         <div id="cart-items"></div>
-        <p>Total: <img src="assets/robux.png" alt="R$" class="robux-image" style="width: 20px; height: auto; vertical-align: middle; margin-right: 5px;"> <span id="cart-total">0</span></p> <!-- Updated to use an image for R$ -->
-        <p>Total: <img src="assets/coins.png" alt="C$" class="coins-image" style="width: 20px; height: auto; vertical-align: middle; margin-right: 5px;"> <span id="cart-total-currency">0</span></p> <!-- Updated to use an image for C$ -->
+        <p>Total: <img src="assets/robux.png" alt="R$" class="robux-image" style="width: 20px; height: auto; vertical-align: middle; margin-right: 5px;"> <span id="cart-total">0</span></p>
+        <p>Total: <img src="assets/coins.png" alt="C$" class="coins-image" style="width: 20px; height: auto; vertical-align: middle; margin-right: 5px;"> <span id="cart-total-currency">0</span></p>
         <button class="checkout-button" onclick="checkout()">
             <i class="fi fi-br-comment-check"></i> Checkout
+        </button>
+        <button class="clear-cart-button" onclick="clearCart()" style="background-color: red; color: white; border: none; padding: 10px; margin-top: 10px; cursor: pointer; display: flex; align-items: center;">
+            <i class="fi fi-br-trash" style="margin-right: 5px; color: white;"></i> Clear Cart
         </button>
     </div>
 </body>

@@ -215,6 +215,10 @@ section.products {
     margin: 0 0 20px;
 }
 
+.cart-sidebar p {
+    margin: 2px 0; /* Adjust the top and bottom margins as needed */
+}
+
 .cart-items {
     flex-grow: 1; /* Allow items to take available space */
     overflow-y: auto; /* Scroll if items overflow */
@@ -267,31 +271,22 @@ section.products {
 }
 
 .checkout-button {
-    background-color: #28a745; /* Green background color */
-    color: white; /* White text color */
-    font-size: 1.2em; /* Font size */
-    padding: 12px 20px; /* Padding for the button */
+    background-color:#005bb5; /* Change to your desired color */
+    color: white; /* White text */
     border: none; /* No border */
-    border-radius: 5px; /* Rounded corners */
+    padding: 10px 20px; /* Padding for size */
+    margin-top: 10px; /* Space above the button */
     cursor: pointer; /* Pointer cursor on hover */
-    transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s; /* Smooth transition */
-    margin-top: 20px; /* Space above the button */
-    width: 100%; /* Full width */
-    display: flex; /* Use flexbox for alignment */
-    align-items: center; /* Center items vertically */
-    justify-content: center; /* Center items horizontally */
+    display: flex; /* Flexbox for icon and text alignment */
+    align-items: center; /* Center the icon and text vertically */
+    justify-content: center; /* Center the icon and text horizontally */
+    border-radius: 8px; /* Rounded corners */
+    font-size: 16px; /* Font size */
 }
 
 .checkout-button i {
     margin-right: 8px; /* Space between icon and text */
-    font-size: 1.5em; /* Icon size */
-    margin-top: 2px; /* Adjust this value to align the icon vertically */
-}
-
-.checkout-button:hover {
-    background-color: #218838; /* Darker green on hover */
-    transform: translateY(-2px); /* Slight lift effect */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow effect */
+    color: white; /* White icon */
 }
 
 .checkout-button:focus {
@@ -412,4 +407,64 @@ button {
     height: auto; /* Maintain aspect ratio */
     vertical-align: middle; /* Align with text */
     margin-right: 5px; /* Space between image and total amount */
+}
+
+.coins-image {
+    width: 20px; /* Adjust the width as needed */
+    height: auto; /* Maintain aspect ratio */
+    vertical-align: middle; /* Align with text */
+    margin-left: 5px; /* Space between text and image */
+}
+
+.clear-cart-button {
+    background-color: red; /* Red background */
+    color: white; /* White text */
+    border: none; /* No border */
+    padding: 12px 20px; /* Padding for size */
+    margin-top: 10px; /* Space above the button */
+    cursor: pointer; /* Pointer cursor on hover */
+    display: flex; /* Flexbox for icon and text alignment */
+    align-items: center; /* Center the icon and text vertically */
+    justify-content: center; /* Center the icon and text horizontally */
+    border-radius: 8px; /* Rounded corners */
+    font-size: 16px; /* Font size */
+}
+
+.clear-cart-button i {
+    margin-right: 8px; /* Space between icon and text */
+    color: white; /* White icon */
+}
+
+.clear-cart-button:hover {
+    transform: scale(1.05); /* Slightly enlarge the button */
+}
+
+/* Common button styles */
+button {
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth transition for background color and scale */
+}
+
+/* Checkout Button Styles */
+.checkout-button {
+    background-color: blue; /* Change to your desired color */
+    color: white; /* White text */
+    border: none; /* No border */
+    padding: 12px 20px; /* Padding for size */
+    margin-top: 10px; /* Space above the button */
+    cursor: pointer; /* Pointer cursor on hover */
+    display: flex; /* Flexbox for icon and text alignment */
+    align-items: center; /* Center the icon and text vertically */
+    justify-content: center; /* Center the icon and text horizontally */
+    border-radius: 8px; /* Rounded corners */
+    font-size: 16px; /* Font size */
+}
+
+.checkout-button i {
+    margin-right: 8px; /* Space between icon and text */
+    color: white; /* White icon */
+}
+
+/* Hover effect for Checkout Button */
+.checkout-button:hover {
+    transform: scale(1.05); /* Slightly enlarge the button */
 }

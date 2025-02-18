@@ -96,13 +96,21 @@ function removeFromCart(index) {
 
 // Function to handle checkout
 function checkout() {
-    alert("Proceeding to checkout...");
+    window.location.href = 'checkout.html';
 }
 
 // Function to toggle the cart sidebar
 function toggleCart() {
     const cartSidebar = document.querySelector('.cart-sidebar');
     cartSidebar.classList.toggle('active'); // Toggle the active class to show/hide
+}
+
+function clearCart() {
+    // Clear the cart in localStorage
+    localStorage.removeItem('cart');
+    
+    // Update the cart display
+    updateCartDisplay();
 }
 
 // Call loadCart on page load
