@@ -7,8 +7,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
     <link rel="icon" href="assets/fischnet.ico" type="image/ico">
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="https://cdn-uicons.flaticon.com/uicons-bold-rounded/css/uicons-bold-rounded.css">
-    <script defer src="js/main.js"></script>
+    <link rel="stylesheet" href="https://cdn-uicons.flaticon.com/uicons-bold-rounded/css/uicons-bold-rounded.css"> 
+    <script defer src="js/main.js"></script> 
 </head>
 <body>
     <header>
@@ -19,31 +19,65 @@
             <a href="about.html">About</a>
             <a href="contact.html">Contact</a>
             <button class="cart-button" onclick="toggleCart()">
-                <i class="fi fi-br-shopping-cart"></i>
+                <i class="fi fi-br-shopping-cart"></i> 
             </button>
         </nav>
     </header>
-
+    
     <section class="products">
         <div class="product-card">
-            <h3>10,000 <img src="assets/coins.png" alt="C$" class="coins-image" style="width: 20px; height: auto; vertical-align: middle; margin-left: 5px;"></h3>
-            <p>Add 10,000 C$ to your balance.</p>
-            <button onclick="addToCart('10,000 C$', 70)">Add to Cart</button>
+            <img src="assets/megalodon.png" alt="Ancient Megalodon">
+            <h3>Ancient Megalodon</h3>
+            <p>Add the Ancient Megalodon caught from behind the Ancient Isles to your collection.</p>
+            <button onclick="addToCart('Ancient Megalodon', 70)">ADD TO CART</button>
         </div>
         <div class="product-card">
-            <h3>50,000 <img src="assets/coins.png" alt="C$" class="coins-image" style="width: 20px; height: auto; vertical-align: middle; margin-left: 5px;"></h3>
-            <p>Add 50,000 C$ to your balance.</p>
-            <button onclick="addToCart('50,000 C$', 100)">Add to Cart</button>
+            <img src="assets/kraken.png" alt="Kraken">
+            <h3>Kraken</h3>
+            <p>Add the exotic Kraken fished from the Kraken Pool to your collection.</p>
+            <button onclick="addToCart('Kraken', 100)">ADD TO CART</button>
         </div>
         <div class="product-card">
-            <h3>100,000 <img src="assets/coins.png" alt="C$" class="coins-image" style="width: 20px; height: auto; vertical-align: middle; margin-left: 5px;"></h3>
-            <p>Add 100,000 C$ to your balance.</p>
-            <button onclick="addToCart('100,000 C$', 65)">Add to Cart</button>
+            <img src="assets/orca.png" alt="Orca">
+            <h3>Orca</h3>
+            <p>Add the legendary Orca caught while migrating to your collection.</p>
+            <button onclick="addToCart('Orca', 65)">ADD TO CART</button>
         </div>
         <div class="product-card">
-            <h3>1,000,000 <img src="assets/coins.png" alt="C$" class="coins-image" style="width: 20px; height: auto; vertical-align: middle; margin-left: 5px;"></h3>
-            <p>Add 1,000,000 C$ to your balance.</p>
-            <button onclick="addToCart('1,000,000 C$', 65)">Add to Cart</button>
+            <img src="assets/colossal.png" alt="Colossal Squid">
+            <h3>Colossal Squid</h3>
+            <p>Add the Colossal Squid caught from the Ancient Isle to your collection.</p>
+            <button onclick="addToCart('Colossal Squid', 65)">ADD TO CART</button>
+        </div>
+        <div class="product-card">
+            <img src="assets/serpentD.png" alt="Ancient Depth Serpent">
+            <h3>Ancient Depth Serpent</h3>
+            <p>Add the Ancient Depth Serpent caught from the Depths to your collection.</p>
+            <button onclick="addToCart('Anc. Depth Serpent', 65)">ADD TO CART</button>
+        </div>
+        <div class="product-card">
+            <img src="assets/exalted.png" alt="Exalted Relic">
+            <h3>Exalted Relic</h3>
+            <p>Add the Exalted Relic to your collection.</p>
+            <button onclick="addToCart('Exalted Relict', 65)">ADD TO CART</button>
+        </div>
+        <div class="product-card">
+            <img src="assets/serpentS.png" alt="Spectral Serpent">
+            <h3>Spectral Serpent</h3>
+            <p>Add the Spectral Serpent to your collection.</p>
+            <button onclick="addToCart('Spectral Serpent', 65)">ADD TO CART</button>
+        </div>
+        <div class="product-card">
+            <img src="assets/betta.png" alt="Burnt Betta">
+            <h3>Burnt Betta</h3>
+            <p>Add the Burnt Betta to your collection.</p>
+            <button onclick="addToCart('Burnt Betta', 65)">ADD TO CART</button>
+        </div>
+        <div class="product-card">
+            <img src="assets/archerfish.png" alt="Ashcloud Archerfish">
+            <h3>Ashcloud Archerfish</h3>
+            <p>Add the Ashcloud Archerfish to your collection.</p>
+            <button onclick="addToCart('Ashcloud Archerfish', 65)">ADD TO CART</button>
         </div>
     </section>
 
@@ -57,7 +91,6 @@
         <h2>Your Cart</h2>
         <div id="cart-items"></div>
         <p>Total: <img src="assets/robux.png" alt="R$" class="robux-image" style="width: 20px; height: auto; vertical-align: middle; margin-right: 5px;"> <span id="cart-total">0</span></p>
-        <p>Total: <img src="assets/coins.png" alt="C$" class="coins-image" style="width: 20px; height: auto; vertical-align: middle; margin-right: 5px;"> <span id="cart-total-currency">0</span></p>
         <button class="checkout-button" onclick="checkout()">
             <i class="fi fi-br-comment-check"></i> Checkout
         </button>

@@ -3,12 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FischNet</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
-    <link rel="icon" href="assets/fischnet.ico" type="image/ico">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="https://cdn-uicons.flaticon.com/uicons-bold-rounded/css/uicons-bold-rounded.css">
-    <script defer src="js/main.js"></script>
+    <title>Checkout</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="css/checkout.css"> 
 </head>
 <body>
     <header>
@@ -18,25 +15,33 @@
             <a href="shop.html">Shop</a>
             <a href="about.html">About</a>
             <a href="contact.html">Contact</a>
-            <button class="cart-button" onclick="toggleCart()">
-                <i class="fi fi-br-shopping-cart"></i>
-            </button>
         </nav>
     </header>
+    <div class="checkout-container">
+        <h1>Checkout</h1>
+        
+        <div class="cart-summary">
+            <h2>Your Cart Items</h2>
+            <div id="cart-items-summary">
+                
+            </div>
+            <p>Total: <img src="assets/robux.png" alt="Robux Icon" class="currency-icon"> <span id="total-amount">0</span></p>
+        </div>
 
-    <p>this aint finished lil bro 😭🙏</p>
+        <div class="user-details">
+            <h2>Enter Your Roblox Username</h2>
+            <p class="username-instruction">
+                Make sure to insert your <strong>username</strong> not <strong>display name</strong>.
+            </p>
+            <form id="checkout-form">
+                <label for="username">Roblox Username:</label>
+                <input type="text" id="username" required>
 
-    <div class="cart-sidebar">
-        <h2>Your Cart</h2>
-        <div id="cart-items"></div>
-        <p>Total: <img src="assets/robux.png" alt="R$" class="robux-image" style="width: 20px; height: auto; vertical-align: middle; margin-right: 5px;"> <span id="cart-total">0</span></p>
-        <p>Total: <img src="assets/coins.png" alt="C$" class="coins-image" style="width: 20px; height: auto; vertical-align: middle; margin-right: 5px;"> <span id="cart-total-currency">0</span></p>
-        <button class="checkout-button" onclick="checkout()">
-            <i class="fi fi-br-comment-check"></i> Checkout
-        </button>
-        <button class="clear-cart-button" onclick="clearCart()" style="background-color: red; color: white; border: none; padding: 10px; margin-top: 10px; cursor: pointer; display: flex; align-items: center;">
-            <i class="fi fi-br-trash" style="margin-right: 5px; color: white;"></i> Clear Cart
-        </button>
+                <button type="submit" class="checkout-button">Proceed to Payment</button>
+            </form>
+        </div>
     </div>
+
+    <script src="js/checkout.js"></script> 
 </body>
 </html>

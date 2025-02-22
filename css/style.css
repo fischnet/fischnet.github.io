@@ -10,9 +10,8 @@ header {
     background-color: #0073e6;
     color: white;
     padding: 20px 40px;
-    display: flex; /* Use flexbox for alignment */
-    justify-content: space-between; /* Space between items */
-    align-items: center; /* Center items vertically */
+    display: flex; 
+    align-items: center; 
 }
 
 header h1 {
@@ -20,31 +19,121 @@ header h1 {
 }
 
 nav {
-    display: flex; /* Use flexbox for navigation items */
-    align-items: center; /* Center items vertically */
-    flex-grow: 1; /* Allow nav to take available space */
+    display: flex; 
+    align-items: center; 
+    margin-left: 0; 
 }
 
 nav a {
-    background-color: #0073e6; /* Background color */
-    color: white; /* Text color */
-    padding: 10px 15px; /* Padding for the links */
-    border-radius: 5px; /* Rounded corners */
-    text-decoration: none; /* Remove underline */
-    transition: background-color 0.3s, transform 0.3s; /* Smooth transition */
-    margin: 0 5px; /* Space between links */
+    background-color: #0073e6; 
+    color: white; 
+    padding: 10px 15px; 
+    border-radius: 5px; 
+    text-decoration: none; 
+    transition: background-color 0.3s, transform 0.3s; 
+    margin: 0 5px; 
 }
 
 nav a:hover {
-    background-color: #005bb5; /* Darker background on hover */
-    transform: translateY(-2px); /* Slight lift effect */
+    background-color: #005bb5; 
+    transform: translateY(-2px); 
 }
 
-section.products {
+button {
+    user-select: none;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    font-family: 'Poppins', sans-serif;
+}
+
+.intro {
+    text-align: center;
+    margin-top: 50px; 
+}
+
+.shop-now-button {
+    display: inline-block;
+    padding: 15px 30px;
+    background-color: #0073e6; 
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 18px;
+    transition: background-color 0.3s ease;
+}
+
+.shop-now-button:hover {
+    background-color: #005bb5; 
+}
+
+footer {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 14px;
+}
+
+.contact-container {
+    max-width: 800px; 
+    margin: auto; 
+    padding: 20px; 
+    text-align: center; 
+}
+
+.contact-info {
+    display: flex; 
+    justify-content: space-between; 
+    gap: 20px; 
+    margin-top: 20px; 
+}
+
+.contact-card {
+    background-color: white; 
+    border: 1px solid #ddd; 
+    border-radius: 10px; 
+    padding: 15px; 
+    text-align: left; 
+    transition: transform 0.3s, box-shadow 0.3s; 
+    flex: 1; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+}
+
+.contact-card:hover {
+    transform: translateY(-5px); 
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); 
+}
+
+.contact-card h3 {
+    color: #0073e6; 
+    margin: 0; 
+    margin-bottom: 10px; 
+}
+
+.contact-card dl {
+    margin: 0; 
+}
+
+.contact-card dt {
+    font-weight: bold; 
+    margin-top: 10px; 
+}
+
+.contact-card dd {
+    margin: 0 0 10px 0; 
+}
+
+.contact-card a {
+    color: #0073e6; 
+    text-decoration: none; 
+    transition: color 0.3s; 
+}
+
+.contact-card a:hover {
+    color: #005bb5; 
+}
+
+.products {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-    gap: 20px; /* Horizontal gap between cards */
-    row-gap: 65px; /* Vertical gap between rows */
+    gap: 60px 20px;
     padding: 20px;
 }
 
@@ -86,6 +175,21 @@ section.products {
     flex-grow: 1;
 }
 
+.product-card button {
+    background-color: #0073e6; 
+    color: white; 
+    border: none; 
+    padding: 10px 15px; 
+    border-radius: 5px; 
+    cursor: pointer; 
+    transition: background-color 0.3s ease, transform 0.2s ease; 
+}
+
+.product-card button:hover {
+    background-color: #005bb5; 
+    transform: translateY(-2px); 
+}
+
 .cta {
     text-align: center;
     background-color: #2b2b2b;
@@ -112,103 +216,47 @@ section.products {
     background-color: #005bb5;
 }
 
-.cta button, .product-card button {
-    background-color: #0073e6;
-    color: white;
-    font-size: 1.1em;
-    padding: 12px 25px;
-    border: none;
-    cursor: pointer;
-    border-radius: 5px;
-    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
-    font-weight: 500;
-    text-transform: uppercase;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    margin-top: auto;
+.cart-button {
+    background-color: #0073e6; 
+    color: white; 
+    padding: 10px 15px; 
+    border: none; 
+    border-radius: 5px; 
+    cursor: pointer; 
+    transition: background-color 0.3s, transform 0.3s; 
+    display: flex; 
+    align-items: center; 
+    margin-left: 10px; 
 }
 
-.product-card .quantity-select {
-    margin-top: 10px;
-    padding: 8px;
-    font-size: 1em;
-    border-radius: 5px;
-    border: 1px solid #ccc;
-    cursor: pointer;
+.cart-button i {
+    font-size: 1.25em; 
+    margin-top: 5px; 
+    margin-left: 0px; 
 }
 
-.cta button:hover, .product-card button:hover {
-    background-color: #005bb5;
-    transform: translateY(-3px);
-    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
-}
-
-.cta button:focus, .product-card button:focus {
-    outline: none;
-    box-shadow: 0 0 0 2px #ffcc00;
-}
-
-.title-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 10vh;
-    text-align: center;
-}
-
-.title-container h2 {
-    font-size: 32px;
-    margin: 0;
-}
-
-.currency-packs {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    justify-content: center;
-    padding: 20px;
-}
-
-.currency-pack {
-    background-color: white;
-    border: 1px solid #ddd;
-    border-radius: 10px;
-    padding: 20px;
-    text-align: center;
-    transition: transform 0.3s, box-shadow 0.3s;
-    width: 200px; /* Fixed width for currency packs */
-}
-
-.currency-pack:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-}
-
-.currency-pack h3 {
-    margin: 10px 0;
-    color: #0073e6;
-}
-
-.currency-pack p {
-    margin: 10px 0;
+.cart-button:hover {
+    background-color: #005bb5; 
+    transform: translateY(-2px); 
 }
 
 .cart-sidebar {
     position: fixed;
-    right: -500px; /* Start off-screen */
+    right: -500px; 
     top: 0;
     width: 300px;
     height: 100%;
     background-color: white;
     box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
     padding: 20px;
-    display: flex; /* Use flexbox for layout */
+    display: flex; 
     flex-direction: column;
-    transition: transform 0.3s ease; /* Smooth transition for sliding */
-    user-select: none; /* Prevent text selection */
+    transition: transform 0.3s ease; 
+    user-select: none; 
 }
 
 .cart-sidebar.active {
-    transform: translateX(-500px); /* Slide in */
+    transform: translateX(-500px); 
 }
 
 .cart-sidebar h2 {
@@ -216,255 +264,91 @@ section.products {
 }
 
 .cart-sidebar p {
-    margin: 2px 0; /* Adjust the top and bottom margins as needed */
+    margin: 2px 0; 
 }
 
 .cart-items {
-    flex-grow: 1; /* Allow items to take available space */
-    overflow-y: auto; /* Scroll if items overflow */
-}
-
-.cart-items div {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 10px;
-}
-
-.cart-total {
-    font-size: 1.5em;
-    margin-top: 20px;
-    text-align: right;
+    flex-grow: 1; 
+    overflow-y: auto; 
 }
 
 .cart-item {
-    display: flex; /* Use flexbox for alignment */
-    justify-content: space-between; /* Space between text and button */
-    align-items: center; /* Center items vertically */
-    margin-bottom: 10px; /* Space between items */
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+    margin-bottom: 10px; 
 }
 
 .item-text {
-    flex-grow: 1; /* Allow text to take available space */
-    margin-right: 10px; /* Space between text and button */
-    white-space: nowrap; /* Prevent text from wrapping */
-    overflow: hidden; /* Hide overflow */
-    text-overflow: ellipsis; /* Add ellipsis for overflow text */
+    flex-grow: 1; 
+    margin-right: 10px; 
+    white-space: nowrap; 
+    overflow: hidden; 
+    text-overflow: ellipsis; 
 }
 
 .remove-button {
-    background-color: transparent; /* Transparent background */
-    border: none; /* No border */
-    cursor: pointer; /* Pointer cursor on hover */
-    color: #0073e6; /* Icon color */
-    font-size: 1.2em; /* Icon size */
-    display: flex; /* Use flexbox */
-    align-items: center; /* Center vertically */
-    justify-content: center; /* Center horizontally */
-    padding: 0; /* Remove padding if necessary */
-    height: 30px; /* Set a fixed height for the button */
-    width: 30px; /* Set a fixed width for the button */
+    background-color: transparent; 
+    border: none; 
+    cursor: pointer; 
+    color: #0073e6; 
+    font-size: 1.2em; 
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    padding: 0; 
+    height: 30px; 
+    width: 30px; 
 }
 
 .remove-button:hover {
-    color: #005bb5; /* Darker color on hover */
+    color: #005bb5; 
 }
 
 .checkout-button {
-    background-color:#005bb5; /* Change to your desired color */
-    color: white; /* White text */
-    border: none; /* No border */
-    padding: 10px 20px; /* Padding for size */
-    margin-top: 10px; /* Space above the button */
-    cursor: pointer; /* Pointer cursor on hover */
-    display: flex; /* Flexbox for icon and text alignment */
-    align-items: center; /* Center the icon and text vertically */
-    justify-content: center; /* Center the icon and text horizontally */
-    border-radius: 8px; /* Rounded corners */
-    font-size: 16px; /* Font size */
+    background-color: #005bb5; 
+    color: white; 
+    border: none; 
+    padding: 12px 20px; 
+    margin-top: 10px; 
+    cursor: pointer; 
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    border-radius: 8px; 
+    font-size: 16px; 
+    line-height: 1px;
+}
+
+.checkout-button:hover {
+    transform: scale(1.05); 
 }
 
 .checkout-button i {
-    margin-right: 8px; /* Space between icon and text */
-    color: white; /* White icon */
-}
-
-.checkout-button:focus {
-    outline: none; /* Remove outline */
-    box-shadow: 0 0 0 2px #ffcc00; /* Focus outline */
-}
-
-/* Prevent text selection on buttons and their parent elements */
-button {
-    user-select: none; /* Prevent text selection */
-}
-
-.cart-button {
-    background-color: #0073e6; /* Blue background color */
-    color: white; /* White text color */
-    font-size: 1em; /* Smaller font size */
-    padding: 8px 8px; /* Reduced padding for a smaller button */
-    border: none; /* No border */
-    border-radius: 5px; /* Rounded corners */
-    cursor: pointer; /* Pointer cursor on hover */
-    transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s; /* Smooth transition */
-    display: flex; /* Use flexbox for alignment */
-    align-items: center; /* Center items vertically */
-}
-
-.cart-button i {
-    margin-right: 2px; /* Space between icon and text */
-    font-size: 1.2em; /* Icon size */
-    line-height: 1; /* Reset line height to center the icon */
-    vertical-align: middle; /* Align icon vertically */
-}
-
-.cart-button:hover {
-    background-color: #005bb5; /* Darker blue on hover */
-    transform: translateY(-2px); /* Slight lift effect */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow effect */
-}
-
-.cart-button:focus {
-    outline: none; /* Remove outline */
-    box-shadow: 0 0 0 2px #ffcc00; /* Focus outline */
-}
-
-.contact-container {
-    max-width: 800px; /* Set a maximum width for the container */
-    margin: auto; /* Center the container */
-    padding: 20px; /* Add padding around the container */
-    text-align: center; /* Center text */
-}
-
-.contact-info {
-    display: flex; /* Use flexbox for layout */
-    justify-content: space-between; /* Space between cards */
-    gap: 20px; /* Space between cards */
-    margin-top: 20px; /* Space above the cards */
-}
-
-.contact-card {
-    background-color: white; /* Card background color */
-    border: 1px solid #ddd; /* Card border */
-    border-radius: 10px; /* Rounded corners */
-    padding: 15px 15px 20px; /* Adjusted padding: top, sides, bottom */
-    text-align: left; /* Align text to the left */
-    transition: transform 0.3s, box-shadow 0.3s; /* Smooth transition for hover effects */
-    flex: 1; /* Allow cards to grow equally */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Shadow effect */
-}
-
-.contact-card:hover {
-    transform: translateY(-5px); /* Lift effect on hover */
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Darker shadow on hover */
-}
-
-.contact-card h3 {
-    color: #0073e6; /* Color for the card title */
-    margin: 0; /* Remove margin to reduce space */
-    margin-bottom: 10px; /* Space below the title */
-}
-
-.contact-card dl {
-    margin: 0; /* Remove default margin */
-}
-
-.contact-card dt {
-    font-weight: bold; /* Bold for definition terms */
-    margin-top: 10px; /* Space above definition terms */
-}
-
-.contact-card dd {
-    margin: 0 0 10px 0; /* Space below definition descriptions */
-}
-
-.contact-card a {
-    color: #0073e6; /* Link color */
-    text-decoration: none; /* Remove underline */
-    transition: color 0.3s; /* Smooth transition for link color */
-}
-
-.contact-card a:hover {
-    color: #005bb5; /* Darker color on link hover */
-}
-
-.role-description {
-    font-size: 0.9em; /* Smaller font size */
-    color: #888; /* Grey color */
-    margin: 15px 0 -5px 0px; /* Space above and below the description */
-    text-align: center; /* Center the text */
-}
-
-.divider {
-    border: none; /* Remove default border */
-    border-top: 1px solid #ddd; /* Add a top border */
-    margin: 5px 0; /* Space above and below the divider */
-}
-
-.robux-image, .coins-image {
-    width: 20px; /* Adjust the width as needed */
-    height: auto; /* Maintain aspect ratio */
-    vertical-align: middle; /* Align with text */
-    margin-right: 5px; /* Space between image and total amount */
-}
-
-.coins-image {
-    width: 20px; /* Adjust the width as needed */
-    height: auto; /* Maintain aspect ratio */
-    vertical-align: middle; /* Align with text */
-    margin-left: 5px; /* Space between text and image */
+    margin-right: 5px;
+    vertical-align: middle;
 }
 
 .clear-cart-button {
-    background-color: red; /* Red background */
-    color: white; /* White text */
-    border: none; /* No border */
-    padding: 12px 20px; /* Padding for size */
-    margin-top: 10px; /* Space above the button */
-    cursor: pointer; /* Pointer cursor on hover */
-    display: flex; /* Flexbox for icon and text alignment */
-    align-items: center; /* Center the icon and text vertically */
-    justify-content: center; /* Center the icon and text horizontally */
-    border-radius: 8px; /* Rounded corners */
-    font-size: 16px; /* Font size */
+    background-color: red; 
+    color: white; 
+    border: none; 
+    padding: 12px 20px; 
+    margin-top: 10px; 
+    cursor: pointer; 
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    border-radius: 8px; 
+    font-size: 16px;
+    line-height: -1px;
 }
 
 .clear-cart-button i {
-    margin-right: 8px; /* Space between icon and text */
-    color: white; /* White icon */
+    margin-right: 5px;
+    vertical-align: middle;
 }
 
 .clear-cart-button:hover {
-    transform: scale(1.05); /* Slightly enlarge the button */
-}
-
-/* Common button styles */
-button {
-    transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth transition for background color and scale */
-}
-
-/* Checkout Button Styles */
-.checkout-button {
-    background-color: blue; /* Change to your desired color */
-    color: white; /* White text */
-    border: none; /* No border */
-    padding: 12px 20px; /* Padding for size */
-    margin-top: 10px; /* Space above the button */
-    cursor: pointer; /* Pointer cursor on hover */
-    display: flex; /* Flexbox for icon and text alignment */
-    align-items: center; /* Center the icon and text vertically */
-    justify-content: center; /* Center the icon and text horizontally */
-    border-radius: 8px; /* Rounded corners */
-    font-size: 16px; /* Font size */
-}
-
-.checkout-button i {
-    margin-right: 8px; /* Space between icon and text */
-    color: white; /* White icon */
-}
-
-/* Hover effect for Checkout Button */
-.checkout-button:hover {
-    transform: scale(1.05); /* Slightly enlarge the button */
+    transform: scale(1.05);
 }

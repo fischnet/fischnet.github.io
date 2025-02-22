@@ -4,40 +4,39 @@ body {
     padding: 0;
     background-color: #f8f9fa;
     color: #333;
-    text-align: left;
 }
 
 header {
-    background-color: #0073e6; /* Header background color */
+    background-color: #0073e6;
     color: white;
     padding: 20px 40px;
-    text-align: center;
+    display: flex; 
+    align-items: center; 
 }
 
 header h1 {
     margin: 0;
-    color: #ffffff;
 }
 
 nav {
-    margin-top: 10px;
-    display: flex; /* Use flexbox for alignment */
-    justify-content: center; /* Center the nav items */
+    display: flex; 
+    align-items: center; 
+    margin-left: 0; 
 }
 
 nav a {
-    background-color: transparent; /* Transparent background for links */
-    color: white; /* Text color */
-    padding: 10px 15px; /* Padding for the links */
-    border-radius: 5px; /* Rounded corners */
-    text-decoration: none; /* Remove underline */
-    transition: background-color 0.3s, transform 0.3s; /* Smooth transition */
-    margin: 0 5px; /* Space between links */
+    background-color: #0073e6; 
+    color: white; 
+    padding: 10px 15px; 
+    border-radius: 5px; 
+    text-decoration: none; 
+    transition: background-color 0.3s, transform 0.3s; 
+    margin: 0 5px; 
 }
 
 nav a:hover {
-    background-color: #005bb5; /* Darker background on hover */
-    transform: translateY(-2px); /* Slight lift effect */
+    background-color: #005bb5; 
+    transform: translateY(-2px); 
 }
 
 .content {
@@ -69,5 +68,5 @@ ul {
 }
 
 .theme-toggle {
-    display: none; /* Removed */
+    display: none; 
 }

@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FischNet</title>
+    <title>FischNet - Home</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
     <link rel="icon" href="assets/fischnet.ico" type="image/ico">
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="https://cdn-uicons.flaticon.com/uicons-bold-rounded/css/uicons-bold-rounded.css"> <!-- Added link for icons -->
-    <script defer src="js/main.js"></script> <!-- JS file for general JS -->
+    <link rel="stylesheet" href="https://cdn-uicons.flaticon.com/uicons-bold-rounded/css/uicons-bold-rounded.css"> 
+    <script defer src="js/main.js"></script> 
 </head>
 <body>
     <header>
@@ -18,86 +18,20 @@
             <a href="shop.html">Shop</a>
             <a href="about.html">About</a>
             <a href="contact.html">Contact</a>
-            <button class="cart-button" onclick="toggleCart()">
-                <i class="fi fi-br-shopping-cart"></i> <!-- Only the icon -->
-            </button>
         </nav>
     </header>
 
-    <section class="products">
-        <div class="product-card">
-            <img src="assets/megalodon.png" alt="Ancient Megalodon">
-            <h3>Ancient Megalodon</h3>
-            <p>Add the Ancient Megalodon caught from behind the Ancient Isles to your collection.</p>
-            <button onclick="addToCart('Ancient Megalodon', 70)">Add to Cart</button>
-        </div>
-        <div class="product-card">
-            <img src="assets/kraken.png" alt="Kraken">
-            <h3>Kraken</h3>
-            <p>Add the exotic Kraken fished from the Kraken Pool to your collection.</p>
-            <button onclick="addToCart('Kraken', 100)">Add to Cart</button>
-        </div>
-        <div class="product-card">
-            <img src="assets/orca.png" alt="Orca">
-            <h3>Orca</h3>
-            <p>Add the legendary Orca caught while migrating to your collection.</p>
-            <button onclick="addToCart('Orca', 65)">Add to Cart</button>
-        </div>
-        <div class="product-card">
-            <img src="assets/colossal.png" alt="Colossal Squid">
-            <h3>Colossal Squid</h3>
-            <p>Add the Colossal Squid caught from the Ancient Isle to your collection.</p>
-            <button onclick="addToCart('Colossal Squid', 65)">Add to Cart</button>
-        </div>
-        <div class="product-card">
-            <img src="assets/serpentD.png" alt="Ancient Depth Serpent">
-            <h3>Ancient Depth Serpent</h3>
-            <p>Add the Ancient Depth Serpent caught from the Depths to your collection.</p>
-            <button onclick="addToCart('Anc. Depth Serpent', 65)">Add to Cart</button>
-        </div>
-        <div class="product-card">
-            <img src="assets/exalted.png" alt="Exalted Relic">
-            <h3>Exalted Relic</h3>
-            <p>Add the Exalted Relic to your collection.</p>
-            <button onclick="addToCart('Exalted Relict', 65)">Add to Cart</button>
-        </div>
-        <div class="product-card">
-            <img src="assets/serpentS.png" alt="Spectral Serpent">
-            <h3>Spectral Serpent</h3>
-            <p>Add the Spectral Serpent to your collection.</p>
-            <button onclick="addToCart('Spectral Serpent', 65)">Add to Cart</button>
-        </div>
-        <div class="product-card">
-            <img src="assets/betta.png" alt="Burnt Betta">
-            <h3>Burnt Betta</h3>
-            <p>Add the Burnt Betta to your collection.</p>
-            <button onclick="addToCart('Burnt Betta', 65)">Add to Cart</button>
-        </div>
-        <div class="product-card">
-            <img src="assets/archerfish.png" alt="Ashcloud Archerfish">
-            <h3>Ashcloud Archerfish</h3>
-            <p>Add the Ashcloud Archerfish to your collection.</p>
-            <button onclick="addToCart('Ashcloud Archerfish', 65)">Add to Cart</button>
-        </div>
-    </section>
+    <main>
+        <section class="intro">
+            <h2>Welcome to FischNet!</h2>
+            <p>Your one-stop shop for all your fishing needs in Roblox. We offer a variety of items to enhance your gaming experience. Whether you're looking for gear, accessories, or in-game currency, we have you covered!</p>
+            <p>Join our community and start your fishing adventure today!</p>
+            <a href="shop.html" class="shop-now-button">Shop Now</a>
+        </section>
+    </main>
 
-    <div class="cta">
-        <h2>Need in-game currency, C$?</h2>
-        <p>You can buy the currency for cheaper than buying from the in-game shop!</p>
-        <button onclick="window.location.href='shop.html'">Money | C$</button>
-    </div>
-
-    <div class="cart-sidebar">
-        <h2>Your Cart</h2>
-        <div id="cart-items"></div>
-        <p>Total: <img src="assets/robux.png" alt="R$" class="robux-image" style="width: 20px; height: auto; vertical-align: middle; margin-right: 5px;"> <span id="cart-total">0</span></p>
-        <p>Total: <img src="assets/coins.png" alt="C$" class="coins-image" style="width: 20px; height: auto; vertical-align: middle; margin-right: 5px;"> <span id="cart-total-currency">0</span></p>
-        <button class="checkout-button" onclick="checkout()">
-            <i class="fi fi-br-comment-check"></i> Checkout
-        </button>
-        <button class="clear-cart-button" onclick="clearCart()" style="background-color: red; color: white; border: none; padding: 10px; margin-top: 10px; cursor: pointer; display: flex; align-items: center;">
-            <i class="fi fi-br-trash" style="margin-right: 5px; color: white;"></i> Clear Cart
-        </button>
-    </div>
+    <footer>
+        <p>&copy; 2023 FischNet. All rights reserved.</p>
+    </footer>
 </body>
 </html>
