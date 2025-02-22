@@ -39,13 +39,6 @@ nav a:hover {
     transform: translateY(-2px); 
 }
 
-.content {
-    max-width: 800px;
-    margin: auto;
-    padding: 20px;
-    text-align: left;
-}
-
 h1 {
     color: #ffffff;
 }
@@ -67,6 +60,48 @@ ul {
     padding-left: 20px;
 }
 
-.theme-toggle {
-    display: none; 
+footer {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 14px;
+    padding: 10px 0;
+}
+
+.content {
+    max-width: 800px;
+    margin: auto;
+    padding: 20px;
+    text-align: left;
+}
+
+.shop-section {
+    background-color: white; /* White background for the section */
+    border: 1px solid #ddd; /* Border similar to contact cards */
+    border-radius: 10px; /* Rounded corners */
+    padding: 20px; /* Padding inside the section */
+    text-align: center; /* Center text */
+    margin: 20px 0; /* Margin around the section */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Shadow effect */
+    transition: transform 0.3s, box-shadow 0.3s; /* Transition for hover effect */
+}
+
+.shop-section:hover {
+    transform: translateY(-5px); /* Lift effect on hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Darker shadow on hover */
+}
+
+.shop-now-button {
+    display: inline-block;
+    padding: 15px 30px;
+    background-color: #0073e6; 
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 18px;
+    transition: background-color 0.3s ease;
+    margin-top: 10px; /* Space above the button */
+}
+
+.shop-now-button:hover {
+    background-color: #005bb5; 
 }

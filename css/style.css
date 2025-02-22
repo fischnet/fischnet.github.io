@@ -45,9 +45,26 @@ button {
     font-family: 'Poppins', sans-serif;
 }
 
+footer {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 14px;
+    padding: 10px 0;
+}
+
 .intro {
     text-align: center;
-    margin-top: 50px; 
+    margin: 50px 0; 
+}
+
+.intro h2 {
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+.intro p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
 }
 
 .shop-now-button {
@@ -65,10 +82,22 @@ button {
     background-color: #005bb5; 
 }
 
-footer {
+.features {
+    padding: 20px;
     text-align: center;
-    margin-top: 20px;
-    font-size: 14px;
+}
+
+.features h2 {
+    margin-bottom: 20px;
+}
+
+.feature {
+    margin: 20px 0;
+}
+
+.feature h3 {
+    font-size: 1.5em;
+    color: #0073e6;
 }
 
 .contact-container {
@@ -195,7 +224,7 @@ footer {
     background-color: #2b2b2b;
     color: white;
     padding: 40px;
-    margin-top: 50px;
+    margin: 50px 0;
 }
 
 .cta h2 {
